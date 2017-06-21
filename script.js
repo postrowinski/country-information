@@ -4,12 +4,20 @@ $(document).ready(function () {
     var url = 'https://restcountries.eu/rest/v2/name/',
         countriesList = $('#countries');
     
-    function showCountriesList(resp) {
+    function showCountriesList(resp) {  
         countriesList.empty();
         resp.forEach(function (item) {
-            $('<li>').text(item.name).appendTo(countriesList);
-            $('<li>').text(' graniczy z :' + item.borders).appendTo(countriesList);
-            $('<li>').append('<img src="' + item.flag + '" width="200px">').appendTo(countriesList);
+            var $countryImg = '<img src="' + item.flag + '" width="120px">';
+            
+            $('<li>').addClass('country').append($countryImg + item.name).appendTo(countriesList);  
+            $('<li>').addClass('separator').text('Country information').appendTo(countriesList);  
+            $('<li>').append('<span>Capital</span>' + item.capital).appendTo(countriesList);
+            $('<li>').append('<span>Area</span>' + item.area).appendTo(countriesList);
+            $('<li>').append('<span>Pupulation</span>' + item.population).appendTo(countriesList);
+            $('<li>').append('<span>Currencies</span>' + item.currencies[0].name).appendTo(countriesList);
+            $('<li>').append('<span>Time zone</span>' + item.timezones[0]).appendTo(countriesList);
+            $('<li>').append('<span>Region</span>' + item.region).appendTo(countriesList);
+            $('<li>').addClass('last-element-list').append('<span>To border on</span>' + item.borders).appendTo(countriesList);
         });
     }
     

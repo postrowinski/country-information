@@ -1,0 +1,49 @@
+ul {
+    list-style-type: none;
+    color: #000;
+    font-size: 18px;
+}
+
+li {
+    max-width: 600px;
+    background: rgba(255, 255, 0, 0.2);
+}
+
+.country {
+    font-size: 26px;
+    color: rgba(21, 64, 180, 0.83);
+}
+
+img {
+    margin-right: 40px;
+    margin-bottom: 8px;
+    -webkit-box-shadow: 3px 3px 5px #000;
+    -moz-box-shadow: 3px 3px 5px #000;
+    -o-box-shadow: 3px 3px 5px #000;
+    box-shadow: 3px 3px 5px #000;
+}
+
+.country {
+    background: #fff;
+}
+
+li span {
+    min-width: 200px;
+    background: rgba(255, 0, 0, 0.2);
+    font-size: 22px;
+    display: inline-block;
+    padding-left: 15px;
+    margin-right: 15px;
+}
+
+.last-element-list {
+    margin-bottom: 50px;
+}
+
+.separator {
+    font-size: 24px;
+    background: rgba(43, 255, 25, 0.4);
+    line-height: 1.8;
+    font-family: 'Verdana', serif;
+    padding-left: 15px;
+}
